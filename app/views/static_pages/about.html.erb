@@ -1,12 +1,11 @@
-<% provide(:title, t("about")) %>
+<% provide :title, t("about") %>
 <h1><%= t "about" %></h1>
 <p>
-iTeam production
-<br>Framgia E-testing System
-<br>Designed by
-<a href="http://www.facebook.com/khanhmata.dn">Khanh Mata</a>
-(a.k.a Khanh Nguyen) and
-<a href="https://www.facebook.com/thaonguyen.tran.7311352">Tran Thao Nguyen</a>.</p>
-Specially thanks to Michael Hartl</a>
-for the <a href="http://www.railstutorial.org/"><em>Ruby on Rails
-Tutorial</em></a>.
+<%= t "iteampro" %>
+<br><%= t "title" %>
+<br><%= t "designedby" %>
+<%= link_to t("khanhmata"), Settings.khanhlink %>
+<%= t "aboutus" %>
+<%= link_to t("nguyen"), Settings.nguyenlink %>.</p>
+<%= t "specialthank" %>
+<%= link_to t("rubyrailstutor"), Settings.rubyrailslink %>.
