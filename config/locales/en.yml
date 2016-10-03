@@ -1,24 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   mrkhanh: "Mr. Khanh Mata"
   mrnguyen: "Mr. Tran Thao Nguyen"
@@ -41,6 +20,7 @@ en:
   nguyen: "Tran Thao Nguyen"
   rubyrailstutor: "Ruby on Rails Tutorial"
   account: "Account"
+  contribute: "Contribute Questions"
   home: "Home"
   help: "Help"
   about: "About"
@@ -55,6 +35,7 @@ en:
   sign_up: "Sign up"
   sign_up_user: "signup"
   sign_in: "Sign in"
+  new_user: "New user?"
   categories: "Categories"
   create: "Create my account"
   creates: "Create"
@@ -109,4 +90,16 @@ en:
       edit:
         cancel_bt: "Cancle"
         edit: "Edit"
-
+  edituser: "Edit User"
+  updateuser: "Update Your Profile"
+  settings: "Settings"
+  allusers: "All Users"
+  profileupdated: "Profile updated"
+  pleaselogin: "Please log in"
+  you_sure: "You sure?"
+  user_deleted: "User deleted!"
+  unsuccess: "Something gone wrong!"
+  save_changes: "Save changes"
+  controllers.admin.users.flash.success.delete_user: "Deleted user!"
+  controllers.admin.users.flash.fail.delete_user: "Deleted fail!"
+  controllers.application.flash.danger.invalid_user: "Invalid user!"

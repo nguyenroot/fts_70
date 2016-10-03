@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
     user = User.find_by email: params[:session][:email].downcase
     if user && user.authenticate(params[:session][:password])
       log_in user
-      params[:session][:remember_me] == Settings.no1 ? remember(user) : forget(user)
+      params[:session][:remember_me] == Settings.remember_value ? remember(user) : forget(user)
       if user.admin?
-        redirect_to admin_root_path
+        redirect_to admin_users_path
       else
         redirect_to user
       end
