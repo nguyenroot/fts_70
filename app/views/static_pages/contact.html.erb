@@ -1,21 +1,22 @@
-<% provide(:title, t("contact")) %>
+<% provide :title, t("contact") %>
 <h1><%= t "contact" %></h1>
 <p>
-  Contact us:
+  <%= t "contactus" %>
   <br>
   <br>---------------------------------
   <br>
-  <br>Mr. Khanh Mata
-  <br><a href="http://www.facebook.com/khanhmata.dn">Facebook</a>.
-  <br>Phone: <a href="#">096 44 03 444</a>.
-  <br>Mail: <a href="#">radnvk@gmail.com</a>.
-  <br>Chatwork ID: <a href="#">KhanhMata</a>.
+  <br><%= t "mrkhanh" %>
+  <br><%= link_to t("fb"), Settings.khanhlink %>.
+  <br><%= t "phone" %> <%= link_to t("khanhphone"), Settings.nothing %>.
+  <br><%= t "mail" %> <%= link_to t("khanhmail"), Settings.nothing %>.
+  <br><%= t "chatworkid" %> <%= link_to t("khanhchatwork"), Settings.nothing %>.
   <br>
   <br>---------------------------------
   <br>
-  <br>Mr. Tran Thao Nguyen
-  <br><a href="http://www.facebook.com/thaonguyen.tran.7311352">Facebook</a>.
-  <br>Phone: <a href="#">096 44 03 444</a>.
-  <br>Mail: <a href="#">radnvk@gmail.com</a>.
-  <br>Chatwork ID: <a href="#">857585</a>.
+  <br><%= t "mrnguyen" %>
+  <br><%= link_to t("fb"), Settings.nguyenlink %>.
+  <br><%= t "phone" %> <%= link_to t("nguyenphone"), Settings.nothing %>.
+  <br><%= t "mail" %> <%= link_to t("nguyenmail"), Settings.nothing %>.
+  <br><%= t "chatworkidct" %>
+  <%= link_to t("nguyenchatwork"), Settings.nothing %>.
 </p>

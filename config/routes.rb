@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
   root "static_pages#home"
+  get "help" => "static_pages#help"
+  get "about" => "static_pages#about"
+  get "contact" => "static_pages#contact"
+  get "contribute" => "static_pages#contribute"
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
+  delete "logout" => "sessions#destroy"
   get "sign_up" => "users#new"
   resources :users
-  resources :registers, only: [:new, :create]
-  resources :categories, only: :index
 
 end

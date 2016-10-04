@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit :name, :email, :password, :password_digest,
-      :chatword_id
+    params.require(:user).permit :name, :email,
+      :chatwork_id, :password, :password_confirmation
   end
 end

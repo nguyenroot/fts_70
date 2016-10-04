@@ -12,16 +12,16 @@
       <%= f.label :email %>
       <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label :chatwork_id %>
+      <%= f.label :chatwork_id, t("chatworkid") %>
       <%= f.text_field :chatwork_id, class: "form-control" %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label :password_confirmation %>
+      <%= f.label :password_confirmation, t("confirmation") %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
 
-      <%= f.submit (t ".submit_button"), class: "btn btn-primary" %>
+      <%= f.submit t("submit"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
