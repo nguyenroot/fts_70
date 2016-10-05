@@ -61,19 +61,15 @@ p {
 
 /* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 25px;
-  color: #00FF00;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: #006600;
-    text-decoration: none;
-  }
+.navbar-default {
+  background-color: #f8f8f8;
+  margin-top: -60px;
+  border-color: #e7e7e7;
+}
+.normalavbar-default .navbar-nav > li > a {
+  color: #777;
+  font-size: 22px;
+  margin-left: 15px;
 }
 
 /* footer */
@@ -331,6 +327,60 @@ aside {
 span.picture {
   margin-top: 10px;
   input {
-    border: 0;
+  border: 0;
   }
+}
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  width: 101px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  width: 101px;
+}
+.btn-primarys {
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  margin-left: -14px;
+  margin-top: -27px;
+  position:relative;
+  height:35px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn-primarys:hover {
+  background:#fff;
+  color:#1AAB8A;
+}
+.btn-primarys:before,.btn-primarys:after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.btn-primarys:after {
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-primarys:hover:before,.btn-primarys:hover:after {
+  width:100%;
+  transition:800ms ease all;
+}
+.navbar-inverse {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
