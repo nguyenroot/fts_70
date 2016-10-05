@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :email
       t.string :password_digest
-      t.string :remember_token
+      t.string :remember_digest
       t.string :chatwork_id
       t.boolean :admin, default: false
 
