@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930114110) do
+ActiveRecord::Schema.define(version: 20161006035845) do
 
   create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20160930114110) do
     t.integer  "duration"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_subjects_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -95,4 +97,5 @@ ActiveRecord::Schema.define(version: 20160930114110) do
   add_foreign_key "exams", "users"
   add_foreign_key "questions", "subjects"
   add_foreign_key "questions", "users"
+  add_foreign_key "subjects", "users"
 end

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :exams
   has_many :questions
+  has_many :subjects
 
   before_save{self.email = email.downcase}
   attr_accessor :remember_token
