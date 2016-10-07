@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :logged_in_user
-  before_action :verify_admin, only: :destroy
+  before_action :verify_admin
   before_action :load_user, only: :destroy
 
   def destroy
