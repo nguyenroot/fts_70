@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    root "subjects#index"
+    root "static_pages#home"
     resources :subjects
+    resources :users
   end
-
   root "static_pages#home"
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
@@ -15,5 +15,4 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
   get "signup" => "users#new"
   resources :users
-
 end
