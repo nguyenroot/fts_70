@@ -8,6 +8,7 @@ pagination:
   size: 10
 remember_value: 1
 user_per_page: 20
+minimum_answer: 1
 status:
   exam:
     start: "start"

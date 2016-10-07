@@ -186,10 +186,22 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  display: block;
   width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 input {
@@ -348,39 +360,48 @@ span.picture {
   border:none;
   margin-left: -14px;
   margin-top: -27px;
-  position:relative;
-  height:35px;
-  font-size:1.6em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
+  position: relative;
+  height: 38px;
+  font-size: 1.5em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
 }
 .btn-primarys:hover {
-  background:#fff;
+  background: #fff;
   color:#1AAB8A;
 }
 .btn-primarys:before,.btn-primarys:after {
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
   background: #1AAB8A;
-  transition:400ms ease all;
+  transition: 400ms ease all;
 }
 .btn-primarys:after {
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
 }
 .btn-primarys:hover:before,.btn-primarys:hover:after {
-  width:100%;
-  transition:800ms ease all;
+  width: 100%;
+  transition: 800ms ease all;
 }
 .navbar-inverse {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
+}
+.panel-info > .panel-heading {
+  color: #31708f;
+  background-color: #f0f0f0;
+  border-color: #bce8f1;
+  font-size: 20px;
+}
+.row {
+  font-size: 16px;
 }
