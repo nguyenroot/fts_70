@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :subjects
     resources :users
   end
-  root "static_pages#home"
+  root "exams#index"
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
   get "signup" => "users#new"
   resources :users
+  resources :exams
+
 end

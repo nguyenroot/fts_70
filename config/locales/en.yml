@@ -67,8 +67,10 @@ en:
   flash:
     success:
       created_subject: "Created subject successfully!"
+      created_exam: "Created exam successfully!"
     danger:
       created_subject: "Created subject failed!"
+      created_exam: "Created exam failed!"
   admin:
     subjects:
       subjects:
@@ -90,6 +92,31 @@ en:
       edit:
         cancel_bt: "Cancle"
         edit: "Edit"
+  exams:
+    index:
+      start_button: "Start"
+      view_button: "View"
+      created_date: "Created Date"
+      subject_name: "Subject's name"
+      status: "Status"
+      duration: "Duration"
+      question_number: "Question number"
+      time: "Spent Time"
+      marks: "Marks"
+      create_button: "Create Exam"
+      exam_list: "Examination List"
+      title: "Exams"
+  labels:
+    status:
+      exam:
+        start: "start"
+        testing: "testing"
+        uncheck: "uncheck"
+        checked: "checked"
+        inactive: "inactive"
+  time_format: "%H:%M:%S"
+  date_format: "%Y/%m/%d"
+  datetime_format: "%Y-%m-%d %l:%M %p"
   edituser: "Edit User"
   updateuser: "Update Your Profile"
   settings: "Settings"

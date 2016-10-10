@@ -1,5 +1,6 @@
 class Admin::SubjectsController < ApplicationController
   before_action :load_subject, except: [:index, :new, :create]
+  before_action :verify_admin
 
   def index
     @subjects = Subject.newest.paginate page: params[:page],

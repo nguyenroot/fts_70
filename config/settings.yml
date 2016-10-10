@@ -8,3 +8,14 @@ pagination:
   size: 10
 remember_value: 1
 user_per_page: 20
+status:
+  exam:
+    start: "start"
+    testing: "testing"
+    uncheck: "uncheck"
+    checked: "checked"
+    inactive: "inactive"
+exams:
+  default_score: 0
+  default_spent_time: 0
+  default_correct: false
