@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :exams
-  has_many :questions
+  has_many :questions, dependent: :destroy
   has_many :subjects
 
   attr_accessor :remember_token
