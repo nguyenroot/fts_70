@@ -2,6 +2,8 @@ class ExamsController < ApplicationController
   before_action :load_exam, except: [:index, :new, :create]
 
   def index
+    @exam = current_user.exams.new
+    @subjects = Subject.all
     @exams = Exam.newest.page(params[:page])
       .per_page Settings.pagination.per_page
   end
@@ -17,6 +19,7 @@ class ExamsController < ApplicationController
       flash.now[:danger] = t "flash.danger.created_exam"
       render :new
     end
+    redirect_to root_path
   end
 
   def update

@@ -21,6 +21,7 @@ class ExamQuestion < ApplicationRecord
             .first.content_answer.downcase
           content = question.answers.first.content.downcase
           is_correct = content == content_answer
+        end
       end
     end
     self.update is_correct: is_correct
