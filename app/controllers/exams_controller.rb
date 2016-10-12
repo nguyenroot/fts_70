@@ -8,18 +8,24 @@ class ExamsController < ApplicationController
       .per_page Settings.pagination.per_page
   end
 
+  def new
+  end
+
   def show
+    @exam.update_status
+    @exam.exam_questions.each do |exam_question|
+      exam_question.build_exam_answers
+    end
   end
 
   def create
     @exam = current_user.exams.new exam_params
     if @exam.save
-      flash.now[:susscess] = "flash.susscess.create_exam"
+      flash[:success] = t "flash.success.created_exam"
     else
-      flash.now[:danger] = t "flash.danger.created_exam"
-      render :new
+      flash[:danger] = t "flash.danger.created_exam"
     end
-    redirect_to root_path
+    redirect_to user_exams_path(current_user)
   end
 
   def update
@@ -42,14 +48,16 @@ class ExamsController < ApplicationController
 
   private
   def exam_params
-    params.require(:exam).permit :subject_id
+    params.require(:exam).permit :subject_id,
+      exam_questions_attributes: [:id, exam_answers_attributes: [:id,
+      :answer_id, :content_answer, :_destroy]]
   end
 
   def load_exam
-    @exam = exam.find_by id: params[:id]
+    @exam = Exam.find_by id: params[:id]
     unless @exam
       flash.now[:danger] = t "flash.danger.exam_not_found"
-      redirect_to admin_exams_path
+      redirect_to new_exam_path
     end
   end
 end

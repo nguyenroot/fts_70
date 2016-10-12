@@ -136,6 +136,11 @@ en:
         new:
           create_button: "Save"
   exams:
+    questions:
+      save: "Save"
+      checked: "Checked"
+      finish: "Finish"
+      finish_confirm: "Are you sure you want to finish this exam? This action cannot be undone!"
     index:
       start_button: "Start"
       view_button: "View"
@@ -149,6 +154,10 @@ en:
       create_button: "Create Exam"
       exam_list: "Examination List"
       title: "Exams"
+    answers:
+      content_answer: "Your answer"
+      content_answer_holder: "Type your answer here..."
+      content_answer_hint: "This is a text answer. Please type your answer to the above field."
   labels:
     status:
       exam:
@@ -197,3 +206,4 @@ en:
   controllers.admin.users.flash.fail.delete_user: "Deleted fail!"
   controllers.application.flash.danger.invalid_user: "Invalid user!"
   subject_not_found: "Subject not found!"
+

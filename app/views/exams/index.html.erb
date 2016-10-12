@@ -20,9 +20,11 @@
           <th class="question_nunmber"><%= t ".question_number" %></th>
           <th class="time"><%= t ".time" %></th>
           <th class="marks"><%= t ".marks" %></th>
+          <th class="action"><%= t ".action" %></th>
         </tr>
       </thead>
       <%= render "index" %>
     </table>
+    <%= will_paginate @questions %>
   </div>
 </div>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :questions
     end
     resources :users
+    resources :exams
   end
   root "sessions#new"
   get "help" => "static_pages#help"
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   get "signup" => "users#new"
   resources :users do
     root "exams#index"
+    resources :exams
     resources :questions
   end
   resources :exams
