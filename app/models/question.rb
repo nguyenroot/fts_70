@@ -3,6 +3,7 @@ class Question < ApplicationRecord
   belongs_to :subject
   has_many :answers, dependent: :destroy
 
+  enum status: {not_confirm: 0, confirmed: 1, rejected: 2}
   enum answer_type: {single_choice: 0, multi_choice: 1, text: 2}
 
   accepts_nested_attributes_for :answers, allow_destroy: true
