@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     resources :users
   end
-  root "exams#index"
+  root "sessions#new"
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
   get "signup" => "users#new"
-  resources :users
+  resources :users do
+    root "exams#index"
+    resources :questions
+  end
   resources :exams
 
 end

@@ -20,3 +20,8 @@ exams:
   default_score: 0
   default_spent_time: 0
   default_correct: false
+questions:
+  answer_type:
+    single_choice: "single_choice"
+    multi_choice: "multi_choice"
+    text: "text"
