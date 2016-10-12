@@ -56,13 +56,13 @@ ActiveRecord::Schema.define(version: 20161006035845) do
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "content",    limit: 65535
-    t.integer  "type"
+    t.text     "content",     limit: 65535
+    t.integer  "answer_type"
     t.integer  "status"
     t.integer  "user_id"
     t.integer  "subject_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["subject_id"], name: "index_questions_on_subject_id", using: :btree
     t.index ["user_id"], name: "index_questions_on_user_id", using: :btree
   end
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20161006035845) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "remember_token"
+    t.string   "remember_digest"
     t.string   "chatwork_id"
     t.boolean  "admin",           default: false
     t.datetime "created_at",                      null: false

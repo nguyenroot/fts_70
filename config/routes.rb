@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    root "static_pages#home"
     resources :subjects
+    root "subjects#index"
+    resources :questions
+    resources :subjects do
+      resources :questions
+    end
     resources :users
   end
   root "exams#index"
